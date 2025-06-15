@@ -1,104 +1,124 @@
 # *Smart Directory Management System*
-A Python-based directory management tool that organizes files, detects duplicates, and provides undo functionality, all through an intuitive Tkinter-based GUI.
 
-*Features*  
-- **File Categorization:** Automatically categorizes files into folders such as "Images," "Documents," "Videos," and more.  
-- **Duplicate Detection:** Finds duplicate files based on their SHA256 hash values.  
-- **Undo Functionality:** Allows undoing the last file organization operation, reverting files to their original locations.  
-- **User-Friendly GUI:** Built using Tkinter, the GUI allows users to easily scan directories, organize files, and manage duplicates.  
+An intelligent Python-based tool that helps you organize, scan, detect duplicates, and undo file operations — all via a modern Tkinter-powered GUI.
 
-*Technologies Used*
-- *Python*
-- *Tkinter:* For building the graphical user interface.  
-- *Hashlib:* For generating file hashes and detecting duplicates.  
-- *OS and Shutil:* For file and directory management.  
-- *PIL (Pillow):* For handling image metadata (if needed).  
-- *Magic Library (python-magic):* For MIME type detection.  
+🚀 Features
+✅ Automatic File Organization
+Categorizes files into folders like Images, Documents, Audio, Code, etc. using file extensions and MIME types.
 
----
+✅ Duplicate File Detection
+Identifies duplicate files by comparing their content hash (MD5).
 
-*Installation Guide*
+✅ Undo Last Action
+Reverts the last organization operation to restore original file locations.
 
-*Step 1: Clone the Repository* 
-```bash  
-git clone https://github.com/your-username/ai-directory-management-system.git  
-cd ai-directory-management-system  
-```  
+✅ Visual Preview
+Preview how files will be moved before confirming.
 
-*Step 2: Install Required Dependencies*  
-Make sure you have Python installed (version 3.x recommended). Then, run:  
-```bash  
-pip install -r requirements.txt  
-```  
+✅ Modern GUI Interface
+User-friendly, responsive interface using Tkinter and TreeView.
 
-*Step 3: Run the Program*
-```bash  
-python directory_manager.py  
-```  
+📷 GUI Preview
+(Optional: Add screenshots here)
 
----
+🛠 Technologies Used
+Python 3.x
 
-*How to Use the Application*  
+Tkinter – GUI
 
-1. *Scan a Directory:*
-   - Select the folder you want to organize and click the **"Scan"** button to analyze its contents.  
+hashlib – File hashing for duplicates
 
-2. *Organize Files:*
-   - Once the directory is scanned, click **"Organize"** to categorize files into folders (Images, Documents, etc.).  
+magic – MIME type detection
 
-3. *Undo Last Action:*  
-   - Accidentally moved the files to new folders? No worries! Click **"Undo"** to revert the last file organization action.  
+os, shutil – File system operations
 
-4. *Detect Duplicates:*  
-   - Use the **"Find Duplicates"** button to search for duplicate files in the scanned directory. You can then delete the duplicates if desired.  
+Pillow (optional) – For future image metadata handling
 
-5. *Preview Changes (Optional):*  
-   - Before organizing files, click **"Preview Changes"** to see how the files will be reorganized.  
+📦 Installation
+1. Clone this repository
+bash
+Copy
+Edit
+git clone https://github.com/your-username/smart-directory-manager.git
+cd smart-directory-manager
+2. Install required packages
+Ensure you have Python 3 installed.
 
----
+bash
+Copy
+Edit
+pip install -r requirements.txt
+If tkinter fails to install via pip (on some systems), you may need to install it through your system’s package manager (e.g., sudo apt install python3-tk on Ubuntu).
 
-*Folder Categorization*  
+💻 Usage
+bash
+Copy
+Edit
+python directory_manager.py
+🧭 How to Use
+Select a Directory
+Browse and select the folder you want to scan and manage.
 
-By default, the tool categorizes files into the following categories:  
+Scan
+Click Scan to view all files in the directory.
 
-- *Images:* `.jpg`, `.jpeg`, `.png`, `.gif`, `.bmp`  
-- *Documents:* `.pdf`, `.doc`, `.docx`, `.txt`  
-- *Spreadsheets:* `.xls`, `.xlsx`, `.csv`  
-- *Presentations:* `.ppt`, `.pptx`  
-- *Archives:* `.zip`, `.rar`, `.7z`  
-- *Audio:* `.mp3`, `.wav`  
-- *Video:* `.mp4`, `.avi`  
-- *Executables:* `.exe`, `.msi`  
-- *Code:* `.py`, `.js`  
+Organize Files
+Click Organize to auto-categorize files into folders.
 
-Files with extensions not listed above are placed in an "Other" folder.  
+Undo
+If something goes wrong, click Undo to revert.
 
----
+Detect Duplicates
+Find and delete duplicate files by content hash.
 
-*Project Structure*  
+Preview
+See how files will be moved before confirming with the Preview Changes button.
 
-- *main.py:* Contains the core functionality and GUI code.  
-- *README.md:* Documentation for the project.  
-- *requirements.txt:* Lists the Python dependencies.  
+📁 Folder Categorization Logic
+Files are sorted into these categories:
 
----
+Category	Extensions
+Images	.jpg, .jpeg, .png, .gif, .bmp
+Documents	.pdf, .doc, .docx, .txt
+Spreadsheets	.xls, .xlsx, .csv
+Presentations	.ppt, .pptx
+Archives	.zip, .rar, .7z
+Audio	.mp3, .wav
+Video	.mp4, .avi
+Executables	.exe, .msi
+Code	.py, .js
+Other	All uncategorized extensions
 
-*Contributing* 
-Contributions are welcome! Please follow these steps:  
-1. Fork the repository.  
-2. Create a new branch (`git checkout -b feature-branch`).  
-3. Commit your changes (`git commit -m "Add new feature"`).  
-4. Push to your branch (`git push origin feature-branch`).  
-5. Open a pull request on GitHub.  
+📂 Project Structure
+bash
+Copy
+Edit
+.
+├── directory_manager.py    # Main GUI + backend logic
+├── requirements.txt        # Dependencies
+└── README.md               # Project documentation
+🤝 Contributing
+Contributions are welcome!
 
----
+Fork the repo
 
-*Contact*  
-For any questions or suggestions, feel free to contact me at [abhijithshaju2004@gmail.com] or raise an issue on GitHub.  
+Create a new branch: git checkout -b feature-name
 
----
+Make your changes
 
-*Acknowledgments*  
-Special thanks to:  
-- The developers of Tkinter, Pillow, and Python-Magic libraries.  
-- The open-source community for inspiration and support.  
+Commit: git commit -m "Added new feature"
+
+Push: git push origin feature-name
+
+Open a Pull Request
+
+🧑‍💻 Author
+Shashank Singh
+📧 shashanksingh9048@gmail.com
+
+🏅 Acknowledgements
+Tkinter and Python’s standard libraries
+
+python-magic, Pillow
+
+Inspiration from file automation and decluttering tools
